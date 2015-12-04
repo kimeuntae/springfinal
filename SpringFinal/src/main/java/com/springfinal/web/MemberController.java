@@ -26,7 +26,7 @@ public class MemberController {
 		logger.info("Member PersonSelect");
 		List<Member> list = personService.selectPersonDTO();
 		model.addAttribute("list", list );
-		
+//		dddd
 		return "Member";
 	}
 	
