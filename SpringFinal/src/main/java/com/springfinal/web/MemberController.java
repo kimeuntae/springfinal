@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.springfinal.web.domain.Member;
 import com.springfinal.web.service.PersonService;
@@ -26,8 +27,14 @@ public class MemberController {
 		logger.info("Member PersonSelect");
 		List<Member> list = personService.selectPersonDTO();
 		model.addAttribute("list", list );
-//		dddddddf
 		return "Member";
+	}
+    @RequestMapping(value ="/PersonBody", method = RequestMethod.GET)
+	public @ResponseBody List<Member> personBody(Locale locale, Model model) {
+		logger.info("Member PersonSelect");
+		List<Member> list = personService.selectPersonDTO();
+		
+		return list;
 	}
 	
 }
