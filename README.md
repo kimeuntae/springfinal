@@ -1,4 +1,3 @@
-### IT뱅크 Spring FrameWork Project
-
-### 여름 패키지 열차예약 시스템
+### IT뱅크 Spring Framework Project
 ------
+스프링 학습 프로젝트 
